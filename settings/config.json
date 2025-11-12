@@ -1,0 +1,7 @@
+{
+    "Notification" : {
+        "Title" : "Daily currency change",
+        "Enable" : true,
+        "Duration" : 5000
+    }
+}

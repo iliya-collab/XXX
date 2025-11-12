@@ -1,0 +1,8 @@
+
+<RCC>
+    <qresource prefix="/">
+        <file>settings/styles/notification.qss</file>
+        <file>settings/styles/main.qss</file>
+        <file>settings/config.json</file>
+    </qresource>
+</RCC>
