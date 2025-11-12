@@ -1,0 +1,129 @@
+https://api.binance.com/api/v3/ticker/price - получает цены по всем парам (очень много записей)
+https://api.binance.com/api/v3/ticker/price?symbol=BTCUSDT - Получить текущую цену BTC/USDT
+
+BTCUSDT - Bitcoin / Tether
+ETHUSDT - Ethereum / Tether
+BNBUSDT - Binance Coin / Tether
+ADAUSDT - Cardano / Tether
+DOTUSDT - Polkadot / Tether
+XRPUSDT - Ripple / Tether
+
+{
+  "symbol": "BTCUSDT",
+  "price": "45218.50"
+}
+
+https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd
+
+https://api.binance.com/api/v3/ticker/24hr - получить статистику за 24 часа
+https://api.binance.com/api/v3/ticker/24hr?symbol=ETHUSDT - получить статистику за 24 часа для ETH/USDT
+
+{
+  "symbol": "ETHUSDT",
+  "priceChange": "125.40",
+  "priceChangePercent": "2.850",
+  "weightedAvgPrice": "4520.25",
+  "prevClosePrice": "4400.10",
+  "lastPrice": "4525.50",
+  "lastQty": "0.500",
+  "bidPrice": "4525.00",
+  "bidQty": "1.200",
+  "askPrice": "4526.00",
+  "askQty": "0.800",
+  "openPrice": "4400.10",
+  "highPrice": "4550.00",
+  "lowPrice": "4380.50",
+  "volume": "125000.500",
+  "quoteVolume": "565250000.00",
+  "openTime": 1640995200000,
+  "closeTime": 1641081600000,
+  "firstId": 125000000,
+  "lastId": 125025000,
+  "count": 25000
+}
+
+
+https://api.binance.com/api/v3/klines?symbol=BTCUSDT&interval=1h&limit=3 - Исторические данные (свечи) для BTC/USDT
+
+symbol=BTCUSDT - торговая пара
+interval=1h - интервал (1 час)
+limit=3 - количество свечей
+
+[
+  [
+    1641081600000,      // Время открытия
+    "45200.00",         // Цена открытия
+    "45300.50",         // Максимальная цена
+    "45100.75",         // Минимальная цена
+    "45250.25",         // Цена закрытия
+    "125.500",          // Объем
+    1641085199999,      // Время закрытия
+    "5680000.25",       // Объем в котировочной валюте
+    1250,               // Количество сделок
+    "75.200",           // Объем базового актива
+    "3400000.50",       // Объем котировочного актива
+    "0"                 // Игнорировать
+  ],
+  [
+    1641085200000,
+    "45250.25",
+    "45400.00",
+    "45200.00",
+    "45375.80",
+    "140.200",
+    1641088799999,
+    "6350000.80",
+    1400,
+    "85.100",
+    "3860000.25",
+    "0"
+  ],
+  [
+    1641088800000,
+    "45375.80",
+    "45450.25",
+    "45300.00",
+    "45420.40",
+    "130.750",
+    1641092399999,
+    "5930000.60",
+    1350,
+    "78.500",
+    "3560000.75",
+    "0"
+  ]
+]
+
+
+https://api.binance.com/api/v3/exchangeInfo - Информация о бирже
+
+{
+  "timezone": "UTC",
+  "serverTime": 1641092400000,
+  "rateLimits": [
+    {
+      "rateLimitType": "REQUEST_WEIGHT",
+      "interval": "MINUTE",
+      "intervalNum": 1,
+      "limit": 12000
+    }
+  ],
+  "symbols": [
+    {
+      "symbol": "BTCUSDT",
+      "status": "TRADING",
+      "baseAsset": "BTC",
+      "baseAssetPrecision": 8,
+      "quoteAsset": "USDT",
+      "quotePrecision": 8,
+      "filters": [
+        {
+          "filterType": "PRICE_FILTER",
+          "minPrice": "0.10",
+          "maxPrice": "1000000.00",
+          "tickSize": "0.10"
+        }
+      ]
+    }
+  ]
+}
